@@ -4,20 +4,20 @@ pipeline {
     stages {
         stage('Validar Python') {
             steps {
-                bat 'py --version'
+                bat '"C:\\Users\\JESUS\\AppData\\Local\\Python\\bin\\python.exe" --version'
             }
         }
 
         stage('Instalar dependencias') {
             steps {
-                bat 'py -m pip install pandas'
-                bat 'py -m pip install psycopg2-binary'
+                bat '"C:\\Users\\JESUS\\AppData\\Local\\Python\\bin\\python.exe" -m pip install pandas'
+                bat '"C:\\Users\\JESUS\\AppData\\Local\\Python\\bin\\python.exe" -m pip install psycopg2-binary'
             }
         }
 
         stage('Ejecutar procesamiento') {
             steps {
-                bat 'py scripts\\procesamiento.py'
+                bat '"C:\\Users\\JESUS\\AppData\\Local\\Python\\bin\\python.exe" scripts\\procesamiento.py'
             }
         }
 
